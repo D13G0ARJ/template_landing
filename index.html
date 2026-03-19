@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Diseño Web</title>
+    <!-- Importamos nuestro CSS principal que carga todos los módulos -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Scripts Automáticos (No-Blocking) -->
+    <script type="module" src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================================================================
+         HEADER & NAV (GLASSMORPHISM)
+         ========================================================================= -->
+    <header class="header js-header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <span class="header__logo-text">cloudstudio.</span>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#nosotros" class="header__nav-link">Nosotros</a></li>
+                    <li class="header__nav-item"><a href="#servicios" class="header__nav-link">Servicios</a></li>
+                    <li class="header__nav-item"><a href="#flujo-trabajo" class="header__nav-link">¿Cómo lo hacemos?</a>
+                    </li>
+                    <li class="header__nav-item"><a href="#portafolio" class="header__nav-link">Portafolio</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn--outline header__cta">Contáctanos</a>
+            </nav>
+            <!-- Mobile Menu Toggle -->
+            <button class="header__menu-btn js-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="header__menu-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- =========================================================================
+             HERO SECTION (GLOW BACKGROUND + FADE IN)
+             ========================================================================= -->
+        <section id="inicio" class="hero">
+            <div class="container hero__container">
+                <div class="hero__content fade-in-up">
+                    <h1 class="hero__title">
+                        Apasionados de la <br>
+                        transformación <span class="text-highlight text-highlight--tilted">digital.</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Creamos experiencias digitales únicas para marcas dispuestas a destacar.
+                    </p>
+                    <a href="#contacto" class="btn btn--primary">Hablemos de tu proyecto</a>
+                </div>
+                <div class="hero__image-wrapper fade-in-up delay-200">
+                    <div class="placeholder-image"
+                        style="aspect-ratio: 4/3; background-color: #f0f0f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #999;">
+                        Ilustración / Interfaz UI</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             STATS & DATA
+             ========================================================================= -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats__grid fade-in-up">
+                    <div class="stats__item">
+                        <span class="stats__number">300<span class="stats__plus">+</span></span>
+                        <span class="stats__label">Proyectos exitosos</span>
+                    </div>
+                    <div class="stats__item delay-100">
+                        <span class="stats__number">10 años<span class="stats__plus">+</span></span>
+                        <span class="stats__label">Experiencia</span>
+                    </div>
+                    <div class="stats__item delay-200">
+                        <span class="stats__number">200 sitios<span class="stats__plus">+</span></span>
+                        <span class="stats__label">Webs implementadas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner 1 -->
+        <section class="cta-banner fade-in-up" style="margin-top: 4rem; margin-bottom: 4rem;">
+            <div class="container cta-banner__container text-center">
+                <h2 class="cta-banner__title"
+                    style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Agenda una consulta
+                </h2>
+                <p class="cta-banner__subtitle"
+                    style="font-size: 1.2rem; font-weight: 500; color: var(--color-dark); margin-bottom: 1.5rem;">
+                    Empresas buscan tu servicio <span
+                        style="color: var(--color-primary); font-weight: 700;">#ventas</span></p>
+                <a href="#contacto" class="btn btn--primary"
+                    style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px;">Agenda una Consulta Gratuita</a>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SERVICES MAIN GRID (HOVER OVERLAYS + EMPTY STROKE NUMBERS)
+             ========================================================================= -->
+        <section id="servicios" class="services-grid bg-white">
+            <div class="container">
+                <div class="services-grid__wrapper">
+                    <!-- Cards de servicios -->
+                    <div class="service-card fade-in-up">
+                        <span class="service-card__bg-num">01</span>
+                        <h3 class="service-card__title">Desarrollo a la medida</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Desarrollo a la medida</h4>
+                            <p class="service-card__overlay-desc">Soluciones de software personalizadas, arquitecturas
+                                robustas y escalables para necesidades empresariales complejas.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-100">
+                        <span class="service-card__bg-num">02</span>
+                        <h3 class="service-card__title">Diseño UX/UI</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Diseño UX/UI</h4>
+                            <p class="service-card__overlay-desc">Creación de interfaces intuitivas y experiencias de
+                                usuario atractivas orientadas a la retención y conversión.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-200">
+                        <span class="service-card__bg-num">03</span>
+                        <h3 class="service-card__title">E-commerce</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">E-commerce</h4>
+                            <p class="service-card__overlay-desc">Tiendas virtuales seguras y de alto rendimiento que
+                                maximizan tus ventas omnicanal y agilizan procesos logísticos.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-300">
+                        <span class="service-card__bg-num">04</span>
+                        <h3 class="service-card__title">Optimización SEO</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Optimización SEO</h4>
+                            <p class="service-card__overlay-desc">Estrategias y auditoría técnica para posicionar tu
+                                sitio orgánicamente en los primeros resultados de búsqueda.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up">
+                        <span class="service-card__bg-num">05</span>
+                        <h3 class="service-card__title">Sitios Web</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Sitios Web</h4>
+                            <p class="service-card__overlay-desc">Páginas corporativas e institucionales de alto
+                                impacto, rápidas, accesibles y con maquetación perfect pixel.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-100">
+                        <span class="service-card__bg-num">06</span>
+                        <h3 class="service-card__title">Mantenimiento</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Mantenimiento</h4>
+                            <p class="service-card__overlay-desc">Soporte técnico continuo, optimización permanente en
+                                servidores, backups recurrentes y monitoreo 24/7.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-200">
+                        <span class="service-card__bg-num">07</span>
+                        <h3 class="service-card__title">Infraestructura</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Infraestructura</h4>
+                            <p class="service-card__overlay-desc">Arquitectura cloud escalable, despliegue seguro y
+                                gestión de DevOps para aplicaciones críticas en AWS/Google Cloud.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-in-up delay-300">
+                        <span class="service-card__bg-num">08</span>
+                        <h3 class="service-card__title">Análisis de Datos</h3>
+                        <div class="service-card__overlay">
+                            <h4 class="service-card__overlay-title">Análisis de Datos</h4>
+                            <p class="service-card__overlay-desc">Implementación de herramientas de analítica web para
+                                optimizar conversiones basándote en métricas de usuario reales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             WHY US / NOSOTROS (Agencia Confiable - Image 2)
+             ========================================================================= -->
+        <section id="nosotros" class="features-premium fade-in-up">
+            <div class="container">
+                <h2 class="section-title text-center text-dark">
+                    ¿Estás buscando una agencia de <span class="text-highlight text-highlight--fuchsia">Diseño
+                        Web</span><br>confiable?
+                </h2>
+                <div class="features-premium__container">
+                    <div class="features-premium__image fade-in-up delay-200">
+                        <div class="placeholder-image"
+                            style="aspect-ratio: 16/10; background-color: rgba(0,0,0,0.03); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
+                            Ilustración de escritorio
+                        </div>
+                    </div>
+                    <div class="features-premium__content fade-in-up delay-300">
+                        <p class="features-premium__desc">En Cloudstudio, trabajamos de la mano de cada uno de nuestros
+                            clientes para que cada proyecto mejore su presencia en línea, desde una página web hasta la
+                            estrategia de marketing y contenido para su marca.</p>
+                        <ul class="features-premium__list">
+                            <li class="features-premium__item">
+                                <span>Investigación y análisis</span>
+                                <span class="features-premium__check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="features-premium__item">
+                                <span>UX y estrategia de contenido</span>
+                                <span class="features-premium__check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="features-premium__item">
+                                <span>SEO y análisis de rendimiento</span>
+                                <span class="features-premium__check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="features-premium__item">
+                                <span>Redacción de contenido</span>
+                                <span class="features-premium__check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                            </li>
+                            <li class="features-premium__item">
+                                <span>Optimización de conversión</span>
+                                <span class="features-premium__check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="features-premium__desc features-premium__desc--bottom">Nuestra experiencia y enfoque
+                            nos dan una perspectiva que otras agencias no pueden ofrecer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             DETAILED SERVICES (Tarjetas Blancas - Image 1)
+             ========================================================================= -->
+        <section id="servicios" class="services-detail-premium fade-in-up delay-100">
+            <div class="container">
+                <div class="services-detail-premium__grid">
+                    <div class="services-detail-premium__card fade-in-up delay-100">
+                        <h3 class="services-detail-premium__title">Compra de medios</h3>
+                        <p class="services-detail-premium__desc">Generamos campañas de alto rendimiento enfocadas en
+                            generar un alto impacto dentro de diferentes entornos utilizando las estrategias más
+                            eficientes.</p>
+                        <ul class="bullet-list-premium">
+                            <li>Google Ads</li>
+                            <li>Facebook e Instagram Ads</li>
+                            <li>TikTok Ads</li>
+                            <li>Programática</li>
+                        </ul>
+                    </div>
+                    <div class="services-detail-premium__card fade-in-up delay-200">
+                        <h3 class="services-detail-premium__title">Diseño & Branding</h3>
+                        <p class="services-detail-premium__desc">A través de un proceso creativo, creamos marcas con una
+                            identidad visual sólida y estrategias que garantizan permanencia y recordación.</p>
+                        <ul class="bullet-list-premium">
+                            <li>Naming</li>
+                            <li>Identidad Visual</li>
+                            <li>Diseño de Logotipo</li>
+                            <li>Manual de Marca</li>
+                        </ul>
+                    </div>
+                    <div class="services-detail-premium__card fade-in-up delay-300">
+                        <h3 class="services-detail-premium__title">Redes Sociales</h3>
+                        <p class="services-detail-premium__desc">Definimos y ejecutamos estrategias de posicionamiento a
+                            través de contenidos orgánicos enfocados a diferentes audiencias, logrando así generar
+                            presencia y comunidad.</p>
+                        <ul class="bullet-list-premium">
+                            <li>Estrategia de Contenidos</li>
+                            <li>Diseño de Feed</li>
+                            <li>Redacción Creativa</li>
+                            <li>Community Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             CHARACTERISTICS
+             ========================================================================= -->
+        <section class="characteristics fade-in-up">
+            <div class="container">
+                <h2 class="section-title characteristics__title">
+                    Nuestros desarrollos <br>
+                    <span class="text-highlight text-highlight--tilted">cuentan con</span> ciertas características
+                </h2>
+                <div class="characteristics__grid">
+                    <!-- Item 1 -->
+                    <div class="characteristic-item fade-in-up">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path class="svg-accent" d="M12 6v6l4 2" stroke-width="3"></path>
+                        </svg>
+                        <h3 class="characteristic-item__title">Eficientes</h3>
+                        <p class="characteristic-item__desc">Código optimizado para la máxima velocidad de carga.</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="characteristic-item fade-in-up delay-100">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path class="svg-accent" d="M9 12l2 2 4-4" stroke-width="4"></path>
+                        </svg>
+                        <h3 class="characteristic-item__title">Seguros</h3>
+                        <p class="characteristic-item__desc">Protección contra vulnerabilidades modernas de software.
+                        </p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="characteristic-item fade-in-up delay-200">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line class="svg-accent" x1="12" y1="17" x2="12" y2="21" stroke-width="5"></line>
+                        </svg>
+                        <h3 class="characteristic-item__title">Responsivos</h3>
+                        <p class="characteristic-item__desc">Adaptabilidad perfecta a móviles, tablets y monitores.</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="characteristic-item fade-in-up delay-300">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <circle class="svg-accent" cx="12" cy="12" r="3" stroke="none"></circle>
+                        </svg>
+                        <h3 class="characteristic-item__title">Escalables</h3>
+                        <p class="characteristic-item__desc">Arquitectura web preparada para crecer con tu empresa.</p>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="characteristic-item fade-in-up">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            <circle class="svg-accent" cx="15" cy="21" r="2" stroke="none"></circle>
+                        </svg>
+                        <h3 class="characteristic-item__title">Medibles</h3>
+                        <p class="characteristic-item__desc">Analíticas integradas para evaluar el rendimiento
+                            fácilmente.</p>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="characteristic-item fade-in-up delay-100">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path class="svg-accent"
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                                stroke-width="1"></path>
+                        </svg>
+                        <h3 class="characteristic-item__title">Mantenibles</h3>
+                        <p class="characteristic-item__desc">Código limpio que facilita integraciones dinámicas.</p>
+                    </div>
+                    <!-- Item 7 -->
+                    <div class="characteristic-item fade-in-up delay-200">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline class="svg-accent" points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        <h3 class="characteristic-item__title">Modulares</h3>
+                        <p class="characteristic-item__desc">Componentes independientes reusables orientados a
+                            expansión.</p>
+                    </div>
+                    <!-- Item 8 -->
+                    <div class="characteristic-item fade-in-up delay-300">
+                        <svg class="characteristic-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="svg-accent"
+                                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                            </path>
+                        </svg>
+                        <h3 class="characteristic-item__title">Innovadores</h3>
+                        <p class="characteristic-item__desc">Diseño web de vanguardia usando tecnologías de punta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- =========================================================================
+             WORKFLOW / TIMELINE
+             ========================================================================= -->
+        <section id="flujo-trabajo" class="timeline-section section-dark fade-in-up">
+            <div class="container timeline-container">
+                <div class="timeline-header">
+                    <h2 class="section-title text-center text-white">
+                        Proceso de trabajo<br>
+                        <span class="text-highlight js-timeline-title">Planeación</span>
+                    </h2>
+                    <p class="timeline-section__desc text-center js-timeline-desc">Definimos la hoja de ruta
+                        estratégica, analizando los requerimientos técnicos y comerciales para estructurar las bases
+                        sólidas del proyecto.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline">
+                        <div class="timeline__track"></div>
+                        <div class="timeline__progress js-timeline-progress"></div>
+                        <div class="timeline__steps">
+                            <!-- timeline__node como Botones interactivos referenciados independientemente de estilos -->
+                            <button class="timeline__node js-timeline-node" data-title="Kick-Off"
+                                data-desc="Reunión inicial para recabar toda la información valiosa de tu empresa, alinear objetivos y definir los entregables esperados de la plataforma web.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Kick-Off</span>
+                            </button>
+                            <button class="timeline__node timeline__node--active js-timeline-node"
+                                data-title="Planeación"
+                                data-desc="Definimos la hoja de ruta estratégica, analizando los requerimientos técnicos y comerciales para estructurar las bases sólidas del proyecto.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Planeación</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="Wireframe"
+                                data-desc="Se crean los esquemas iniciales (UX) para definir la estructura de la información y la jerarquía de navegación sin distracciones visuales.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Wireframe</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="Diseño"
+                                data-desc="Aplicamos tu identidad corporativa a la estructura aprobada, diseñando interfaces (UI) hermosas, intuitivas y orientadas al usuario y a la conversión.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Diseño</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="Desarrollo"
+                                data-desc="Nuestros ingenieros transforman los diseños en código puro, creando una arquitectura robusta, rápida y pixel-perfect empleando tecnologías de vanguardia.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Desarrollo</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="QA's y Pruebas"
+                                data-desc="Toda la plataforma pasa por un riguroso proceso de aseguramiento de calidad automatizado para garantizar un rendimiento óptimo en diversos dispositivos.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">QA's y Pruebas</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="Lanzamiento"
+                                data-desc="Configuramos los servidores y dominios, liberando tu nueva plataforma web al mundo en un entorno de producción de alta disponibilidad.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Lanzamiento</span>
+                            </button>
+                            <button class="timeline__node js-timeline-node" data-title="Mantenimiento"
+                                data-desc="Brindamos soporte continuo, monitoreo de seguridad y actualizaciones regulares para que tu activo digital siempre opere y crezca sin interrupciones.">
+                                <span class="timeline__point"></span>
+                                <span class="timeline__label">Mantenimiento</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             CLIENTS (SCROLL MARQUEE)
+             ========================================================================= -->
+        <section class="clients fade-in-up delay-200">
+            <div class="container">
+                <h2 class="section-title text-center">Empresas que han <span
+                        class="text-highlight">confiado</span><br>en nosotros</h2>
+                <div class="clients__grid-wrapper">
+                    <div class="clients__grid">
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 1</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 2</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 3</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 4</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 5</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 6</div>
+                        </div>
+                    </div>
+                    <!-- Clon de la grid para el efecto Marquee infinito -->
+                    <div class="clients__grid" aria-hidden="true">
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 1</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 2</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 3</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 4</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 5</div>
+                        </div>
+                        <div class="clients__logo-box">
+                            <div class="placeholder-client">Logo 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner 2 -->
+        <section class="cta-banner fade-in-up" style="margin-top: 4rem; margin-bottom: 4rem;">
+            <div class="container cta-banner__container text-center">
+                <h2 class="cta-banner__title"
+                    style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Agenda una consulta
+                </h2>
+                <p class="cta-banner__subtitle"
+                    style="font-size: 1.2rem; font-weight: 500; color: var(--color-dark); margin-bottom: 1.5rem;">
+                    Empieza tu viaje digital <span style="color: var(--color-primary); font-weight: 700;">#ventas</span>
+                </p>
+                <a href="#contacto" class="btn btn--primary"
+                    style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 8px;">Agenda una Consulta Gratuita</a>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             PORTFOLIO / PROJECTS
+             ========================================================================= -->
+        <section id="portafolio" class="projects">
+            <div class="container">
+                <div class="projects-island fade-in-up delay-100">
+                    <h2 class="section-title text-center text-white">Proyectos de <span class="text-highlight">diseño
+                            web</span> recientes</h2>
+                    <p class="projects__desc text-center">Echa un vistazo a nuestro portafolio para ver algunos de
+                        nuestros proyectos de diseño web recientes. No dudes en ponerte en contacto con nosotros para
+                        obtener más información y saber cómo podemos ayudar a tu empresa a tener éxito en internet.</p>
+
+                    <div class="carousel js-carousel fade-in-up delay-200">
+                        <button class="carousel__btn carousel__btn--prev js-carousel-prev" aria-label="Ver anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="carousel__track js-carousel-track">
+                            <!-- Card 1 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 1</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 2</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 3</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 4</div>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 5</div>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image">Proyecto 6</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel__btn carousel__btn--next js-carousel-next" aria-label="Ver siguiente">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             REELS / TIKTOK
+             ========================================================================= -->
+        <section id="reels" class="projects">
+            <div class="container">
+                <div class="projects-island fade-in-up delay-100" style="margin-top: 1rem;">
+                    <h2 class="section-title text-center text-white">Reels para <span
+                            class="text-highlight">marcas</span></h2>
+                    <p class="projects__desc text-center">Da clic para reproducir los videos de algunas de nuestras
+                        marcas y campañas más exitosas.</p>
+
+                    <div class="carousel js-carousel fade-in-up delay-200">
+                        <button class="carousel__btn carousel__btn--prev js-carousel-prev" aria-label="Ver anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="carousel__track js-carousel-track">
+                            <!-- Card 1 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image" style="aspect-ratio: 9/16;">Reel
+                                        1</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image" style="aspect-ratio: 9/16;">Reel
+                                        2</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image" style="aspect-ratio: 9/16;">Reel
+                                        3</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="carousel__slide js-carousel-slide">
+                                <div class="carousel__card">
+                                    <div class="carousel__card-image placeholder-image" style="aspect-ratio: 9/16;">Reel
+                                        4</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel__btn carousel__btn--next js-carousel-next" aria-label="Ver siguiente">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             REVIEWS
+             ========================================================================= -->
+        <section class="reviews fade-in-up">
+            <div class="container">
+                <div class="reviews__banner text-center" style="margin-bottom: 5rem;">
+                    <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">
+                        ¿Quiénes hablan de <span class="text-highlight--tilted"
+                            style="display: inline-block;">nosotros?</span>
+                    </h2>
+                    <p style="font-size: 1.2rem; font-weight: 500; color: var(--color-dark); margin-bottom: 2rem;">
+                        Con más de 10 años en el mercado <span
+                            style="color: var(--color-primary); font-weight: 700;">#reputación</span>
+                    </p>
+                    <a href="#contacto" class="btn btn--primary" style="padding: 1rem 2rem; font-size: 1.1rem;">Agenda
+                        una Consulta Gratuita</a>
+                </div>
+
+                <h3 class="text-center" style="color:#ccc; font-size: 2rem; font-weight: 800; margin-bottom: 3rem;">
+                    Quienes hablan de nosotros
+                </h3>
+                <div class="reviews__grid">
+                    <div class="review-card">
+                        <div class="review-card__logo text-highlight" style="font-weight:bold; font-size:1.5rem;">branch
+                        </div>
+                        <p class="review-card__text">"Top B2B Companies Latin America 2023"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__logo text-highlight" style="font-weight:bold; font-size:1.5rem;">Clutch
+                        </div>
+                        <p class="review-card__text">"Top Web Design Agencies globally curated 2023"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__logo text-highlight" style="font-weight:bold; font-size:1.5rem;">
+                            Awwwards
+                        </div>
+                        <p class="review-card__text">"Reconocimiento a la Innovación UI/UX del año 2024"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__logo text-highlight" style="font-weight:bold; font-size:1.5rem;">Forbes
+                        </div>
+                        <p class="review-card__text">"Agencias destacadas en Transformación Digital a nivel regional"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             CONTACT SECTION
+             ========================================================================= -->
+        <section id="contacto" class="contact fade-in-up delay-100">
+            <div class="container contact__container">
+                <div class="contact__info">
+                    <span class="contact__label">Contacto</span>
+                    <h2 class="contact__title">Cuéntanos sobre tu proyecto para recibir una atención personalizada</h2>
+                    <p class="contact__desc">Agenda una videollamada con uno de nuestros especialistas, envíanos un
+                        WhatsApp o llena nuestro formulario de contacto para brindarte la atención personalizada.</p>
+                    <a href="#agendar" class="btn btn--outline-fuchsia" style="margin-top:2rem;">¿Cuándo agendamos tu
+                        cita?</a>
+                </div>
+                <div class="contact__form-wrapper">
+                    <form class="form">
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Nombre y apellido" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Compañía" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" class="form__input" placeholder="Whatsapp o Teléfono" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Posición en la compañía" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Industría" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Pais" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input form__textarea" placeholder="Cuéntanos sobre tu proyecto"
+                                rows="4" required></textarea>
+                        </div>
+
+                        <div class="recaptcha-mock">
+                            <div class="recaptcha-mock__checkbox"></div>
+                            <span class="recaptcha-mock__text">No soy un robot</span>
+                            <div class="recaptcha-mock__logo">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#4285f4" stroke-width="2">
+                                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.92-10.42l5.08 5.08" />
+                                </svg>
+                                <small>reCAPTCHA<br>Privacidad - Términos</small>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full btn--whatsapp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="whatsapp-icon">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            Contactar especialista
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             STICKY BOTTOM BANNER
+             ========================================================================= -->
+        <div class="footer-banner">
+            <p>¿Listo para empezar tu proyecto? Contáctanos ahora.</p>
+        </div>
+    </main>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand fade-in-up">
+                    <span class="footer__logo-text">cloudstudio.</span>
+                    <p class="footer__desc">Agencia Digital 360 orientada a Performance y Resultados a través de
+                        Estrategia, Diseño y Tecnología.</p>
+                </div>
+                <div class="footer__links fade-in-up delay-100">
+                    <h4 class="footer__title">Menú</h4>
+                    <ul class="header__nav-list">
+                        <li><a href="#nosotros" class="header__nav-link js-nav-link">Nosotros</a></li>
+                        <li><a href="#servicios" class="header__nav-link js-nav-link">Servicios</a></li>
+                        <li><a href="#flujo-trabajo" class="header__nav-link js-nav-link">¿Cómo lo hacemos?</a></li>
+                        <li><a href="#portafolio" class="header__nav-link js-nav-link">Portafolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social fade-in-up delay-200">
+                    <h4 class="footer__title">Contacto</h4>
+                    <p style="color:#aaa; margin-bottom:0.5rem; font-size:0.9rem;">hola@cloudstudio.com</p>
+                    <div class="footer__social-icons">
+                        <a href="#" class="footer__social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="footer__social-icon" aria-label="Instagram">IG</a>
+                        <a href="#" class="footer__social-icon" aria-label="LinkedIn">IN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Cloudstudio. Todos los derechos reservados.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Aviso de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

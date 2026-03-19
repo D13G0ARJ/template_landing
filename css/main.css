@@ -1,0 +1,30 @@
+/* css/main.css */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@import url('base/variables.css');
+@import url('base/reset.css');
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/animations.css');
+@import url('components/carousel.css');
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+@import url('sections/header.css');
+@import url('sections/timeline.css');
+@import url('sections/hero.css');
+@import url('sections/marketing.css');
+@import url('sections/services.css');
+@import url('sections/portfolio.css');
+@import url('sections/contact.css');
+@import url('sections/footer.css');
+@import url('sections/characteristics.css');
+
+/* Fin del archivo principal */

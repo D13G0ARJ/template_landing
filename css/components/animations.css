@@ -1,0 +1,31 @@
+/* css/components/animations.css */
+
+/* 2. Animaciones de Entrada al hacer Scroll (Fade-In Up) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Agregamos posibles retrasos para hacer efecto cascada (ej. en las tarjetas de servicios) */
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}

@@ -1,0 +1,173 @@
+/* css/sections/marketing.css */
+/* Stats Bar */
+.stats {
+    background-color: var(--color-bg-light);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats__number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+.stats__plus {
+    color: var(--color-primary);
+}
+
+.stats__label {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .stats__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CTA Banner */
+.cta-banner {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+}
+
+.cta-banner__title {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.marketing__desc {
+    color: var(--color-text-muted-alt);
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-banner__subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+/* Timeline */
+.timeline-section__desc {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+    color: #a0a0ab;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline__track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(var(--color-white-rgb), 0.2);
+    transform: translateY(-50%);
+    display: none;
+}
+
+.marketing__icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(var(--color-white-rgb), 0.2);
+    border-radius: var(--radius-sm);
+    display: none;
+}
+
+.timeline__steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.timeline__step {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.timeline__point {
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline__point--active {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.marketing__btn:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.timeline__label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .timeline__track {
+        display: block;
+    }
+
+    .timeline__steps {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .timeline__step {
+        flex-direction: column;
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* Reviews Grid (Containers) */
+.reviews__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 576px) {
+    .reviews__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .reviews__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

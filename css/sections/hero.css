@@ -1,0 +1,89 @@
+/* css/sections/hero.css */
+.hero {
+    background-color: var(--color-white);
+    padding-top: var(--spacing-lg);
+    /* Reducido de xl a lg para subir las estadísticas */
+    padding-bottom: var(--spacing-md);
+    /* Reducido para acercar la siguiente sección */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Evita que el glow desborde verticalmente */
+}
+
+/* 4. Background Glow detrás del Hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.08) 0%, rgba(var(--color-white-rgb), 0) 70%);
+    /* Destello Fucsia */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero__container {
+    position: relative;
+    z-index: 1;
+    /* El contenido va sobre el glow */
+}
+
+.hero__content {
+    margin-bottom: var(--spacing-lg);
+}
+
+.hero__title {
+    font-size: 2.15rem;
+    /* Tamaño reducido para forzar 2 filas */
+    margin-bottom: var(--spacing-md);
+}
+
+.hero__subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__image-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .hero__title {
+        font-size: 3rem;
+        /* Tamaño reducido proporcionalmente en desktop */
+    }
+
+    .hero__subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero {
+        text-align: left;
+    }
+
+    .hero__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+        align-items: center;
+    }
+
+    .hero__content {
+        margin-bottom: 0;
+    }
+
+    .hero__subtitle {
+        margin-left: 0;
+    }
+}

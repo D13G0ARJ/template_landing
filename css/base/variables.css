@@ -1,0 +1,61 @@
+/* css/base/variables.css */
+:root {
+    /* Base RGB components for opacity utilities */
+    --color-primary-rgb: 236, 17, 113;
+    --color-dark-rgb: 16, 16, 19;
+    --color-white-rgb: 255, 255, 255;
+
+    /* Brand Colors */
+    --color-primary: #ec1171;
+    /* Fucsia */
+    --color-primary-dark: #c50c5a;
+    --color-dark: #101013;
+    /* Dark sections */
+    --color-dark-alt: #2a2c35;
+    /* Cards on dark bg */
+    --color-darker: #15151a;
+    /* Footer */
+
+    /* Semantic Colors */
+    --color-text-main: #222222;
+    --color-text-muted: #666666;
+    --color-text-muted-alt: #a0a0ab;
+    --color-text-contact: #8c8c8c;
+    --color-white: #ffffff;
+    --color-bg-light: #f7f9fa;
+    --color-bg-input: #f4f4f5;
+    --color-border: #e2e8f0;
+    --color-border-light: #d3d3d3;
+    --color-border-dark: #c1c1c1;
+
+    /* Typography */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 1rem;
+    /* 16px */
+    --spacing-md: 2rem;
+    /* 32px */
+    --spacing-lg: 4rem;
+    /* 64px */
+    --spacing-xl: 6rem;
+    /* 96px */
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 70px;
+    /* Reducido para optimizar Above The Fold */
+}

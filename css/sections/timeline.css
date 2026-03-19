@@ -1,0 +1,245 @@
+/* css/sections/timeline.css */
+.timeline-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Base de destello opcional detrás del timeline */
+.timeline-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.04) 0%, rgba(var(--color-white-rgb), 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.timeline-container {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-section__desc {
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+/* Wrapper escroleable si la pantalla es más pequeña que el Track */
+.timeline-wrapper {
+    width: 100%;
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-lg);
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Track vertical en mobile */
+.timeline__track {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: calc(1rem + 5px);
+    /* Alineado al centro del punto de 12px (rad=6px) */
+    width: 1px;
+    background-color: rgba(var(--color-white-rgb), 0.4);
+    z-index: 1;
+}
+
+/* Barra de progreso vertical en mobile */
+.timeline__progress {
+    position: absolute;
+    top: 6px;
+    left: calc(1rem + 5px);
+    width: 2px;
+    /* Ancho para vertical */
+    height: var(--timeline-progress, 0%);
+    background-color: var(--color-primary);
+    z-index: 2;
+    transition: height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(-0.5px);
+    /* Centrar visualmente la línea de 2px sobre la de 1px */
+}
+
+.timeline__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+.timeline__node {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+
+.timeline__point {
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    z-index: 4;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+
+.timeline__label {
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === RESPONSIVE DESKTOP === */
+@media (min-width: 768px) {
+    .timeline-wrapper {
+        overflow-x: auto;
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-xl);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .timeline-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .timeline {
+        min-width: 800px;
+        max-width: 1000px;
+        padding: 0;
+    }
+
+    .timeline__track {
+        top: 50%;
+        left: 6px;
+        right: 6px;
+        bottom: auto;
+        width: auto;
+        height: 1px;
+        transform: translateY(-50%);
+    }
+
+    .timeline__progress {
+        top: 50%;
+        left: 6px;
+        height: 2px;
+        width: var(--timeline-progress, 0%);
+        transform: translateY(-50%);
+        transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .timeline__steps {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .timeline__node {
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+    }
+
+    .timeline__point {
+        margin-right: 0;
+    }
+
+    .timeline__label {
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .timeline__node:nth-child(odd) .timeline__label {
+        bottom: 30px;
+        top: auto;
+    }
+
+    .timeline__node:nth-child(even) .timeline__label {
+        top: 30px;
+        bottom: auto;
+    }
+}
+
+/* Micro-interacciones (Hover) */
+.timeline__node:hover .timeline__point {
+    transform: scale(1.4);
+    box-shadow: 0 0 10px rgba(var(--color-white-rgb), 0.7);
+}
+
+.timeline__node:hover .timeline__label {
+    opacity: 1;
+    /* Aclara texto gris */
+    color: var(--color-white);
+}
+
+/* === ESTADO ACTIVO === 
+   (El punto crece y adquiere un contorno fucsia destacado con centro blanco) 
+*/
+.timeline__node--active .timeline__point {
+    background-color: var(--color-white);
+    border: 3px solid var(--color-primary);
+    /* Anillo Fucsia exacto Imagen 2 */
+    transform: scale(1.6);
+    box-shadow: 0 0 16px rgba(var(--color-primary-rgb), 0.4);
+}
+
+/* El texto Activo pasa de gris a Fucsia Neón */
+.timeline__node--active .timeline__label {
+    color: var(--color-primary);
+    font-weight: 800;
+    /* Lo engordamos sutilmente */
+    opacity: 1;
+}
+
+/* Efecto Fade JS Global reservado para Title / Desc */
+.fade-text {
+    animation: textEntry 0.4s ease-in-out forwards;
+}
+
+@keyframes textEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

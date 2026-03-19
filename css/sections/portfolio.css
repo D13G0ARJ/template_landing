@@ -1,0 +1,168 @@
+/* css/sections/portfolio.css */
+/* 3. Carrusel Infinito (Marquee) para los Logos de Clientes */
+.clients {
+    text-align: center;
+    overflow: hidden;
+    /* Ocultar el scroll horizontal */
+    padding: var(--spacing-lg) 0;
+}
+
+/* Wrapper general que controla el desbordamiento y posicionamiento */
+.clients__grid-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Gradientes laterales opcionales para desvanecer logos en los bordes */
+.clients__grid-wrapper::before,
+.clients__grid-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15%;
+    /* Porcentaje de la pantalla difuminado */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clients__grid-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg-light) 0%, transparent 100%);
+}
+
+.clients__grid-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg-light) 0%, transparent 100%);
+}
+
+.clients__grid {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    gap: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+    /* Espacio antes de repetir */
+    align-items: center;
+    min-width: 100%;
+    /* Asegurar que ocupe todo */
+    flex-shrink: 0;
+}
+
+/* Pausar en hover */
+.clients__grid-wrapper:hover .clients__grid {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+    /* Se mueve hacia la izq exactamente el ancho de un .clients__grid interno */
+}
+
+.clients__logo-box {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s;
+    min-width: 150px;
+    /* Ancho fijo para flex items */
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    .clients__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .clients__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .clients__grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
+
+/* Projects Grid */
+.projects__desc {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    color: var(--color-text-muted-alt);
+}
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.projects-island {
+    background-color: var(--color-dark-alt);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid rgba(var(--color-white-rgb), 0.1);
+}
+
+.project-card {
+    background-color: var(--color-dark-alt);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-card__image-box {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card__image-box {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Bots */
+.bots {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bots__desc {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-muted-alt);
+}
+
+.bots__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.bot-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+    .bots__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
