@@ -3,6 +3,8 @@
     position: relative;
     width: 100%;
     margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    /* Evita que choque con el borde inferior del contenedor padre */
 }
 
 .carousel__track {
@@ -28,14 +30,16 @@
     /* Mobile: 1 card */
     scroll-snap-align: start;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel__card {
     background-color: var(--color-bg-light);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    height: 100%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    box-shadow: 0 4px 15px rgba(var(--color-dark-rgb), 0.2);
 }
 
 .carousel__card-image {
@@ -53,6 +57,8 @@
 /* Nav Buttons */
 .carousel__btn {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -148,5 +154,31 @@
 
     .projects-island {
         padding: 4rem 3rem;
+    }
+}
+
+/* Modificadores para Carrusel de Reels (Más delgados y cortos) */
+@media (min-width: 576px) {
+    .carousel--reels .carousel__slide {
+        flex: 0 0 calc(50% - (var(--spacing-md) / 2));
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel--reels .carousel__slide {
+        flex: 0 0 calc(33.333% - (var(--spacing-md) * 2 / 3));
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel--reels .carousel__slide {
+        /* Pasan de 4 a 5 columnas para reducir su extrema altura natural 9:16 */
+        flex: 0 0 calc(20% - (var(--spacing-md) * 4 / 5));
+    }
+}
+
+@media (min-width: 1280px) {
+    .carousel--reels .carousel__slide {
+        flex: 0 0 calc(16.666% - (var(--spacing-md) * 5 / 6));
     }
 }
