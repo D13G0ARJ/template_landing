@@ -1,4 +1,4 @@
-# 🚀 Cloudstudio Landing Page Template
+# 🚀Landing Page Template
 
 Una plantilla base y biblioteca de componentes UI de alto rendimiento, diseñada para la rápida creación de *Landing Pages* y sitios web corporativos en Cloudstudio o agencias de desarrollo en general. Construida desde cero enfocándose en la velocidad de carga, la escalabilidad técnica y la mantenibilidad a largo plazo sin depender de frameworks externos.
 
